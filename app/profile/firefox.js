@@ -25,6 +25,7 @@ pref("browser.hiddenWindowChromeURL", "chrome://browser/content/hiddenWindowMac.
 pref("extensions.abuseReport.enabled", true);
 pref("extensions.abuseReport.amWebAPI.enabled", true);
 pref("extensions.abuseReport.amoFormEnabled", true);
+pref("gfx.webrender.all, true");
 
 // Enables some extra Extension System Logging (can reduce performance)
 pref("extensions.logging.enabled", false);
