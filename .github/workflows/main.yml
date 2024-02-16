@@ -12,6 +12,8 @@ jobs:
       image: ubuntu:rolling
     
     steps:
+    - name: update
+      run: apt update -y && apt upgrade -y && apt autoremove -y && apt install git git-lfs -y
     - name: Check out repository
       uses: actions/checkout@v4
       with:
