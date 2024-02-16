@@ -20,6 +20,6 @@ jobs:
       run: ./make_deb.sh
       continue-on-error: true  # This line ensures that the workflow continues even if this step fails
     - name: install deb
-      run: dpkg -i dist.deb
+      run: sudo dpkg -i dist.deb
     - name: ls
       run: ls -a
