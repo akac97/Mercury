@@ -1,0 +1,22 @@
+name: Android CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+    - name: chmod +x make_deb.sh
+      run: chmod +x make_deb.sh
+    - name: build deb
+      run: ./make_deb.sh
+    - name: ls
+      run: ls -a
